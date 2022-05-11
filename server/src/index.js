@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const fs = require('fs');
-const environment = require('./environment.js');
+const environment = require('../config/environment.js');
 const env = environment.environment;
 const app = express();
 const porta = 8000;
@@ -13,7 +13,7 @@ const con = mysql.createConnection({
     database: env.database, 
     port: 3306, 
     ssl: {
-        ca: fs.readFileSync("ssl.crt.pem")
+        ca: fs.readFileSync("./config/ssl.crt.pem")
     }
 });
 
