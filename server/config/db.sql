@@ -12,7 +12,7 @@ CREATE TABLE `users`(
 CREATE TABLE `messages`(
 	`id` int AUTO_INCREMENT PRIMARY KEY,
 	`title` VARCHAR(50) NOT NULL,
-	`body` VARCHAR(200) NOT NULL,
+	`body` VARCHAR(1000) NOT NULL,
 	`date` TIMESTAMP,
 	`received_user_id` int,
 	`sent_user_id` int,

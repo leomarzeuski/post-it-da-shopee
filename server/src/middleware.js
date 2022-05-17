@@ -9,6 +9,11 @@ exports.authenticateToken = function(req, res) {
     });
 }
 
+exports.getUser = function(token){
+    const decoded = jwt.decode(token);
+    return decoded.id;
+}
+
 exports.createToken = function (user){
     const token = jwt.sign({id: user.id}, process.env.SECRET, {
         expiresIn: 3600
