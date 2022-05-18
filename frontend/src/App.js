@@ -5,8 +5,10 @@ import MarquimDJ from './componentes/MarquimDJ.js';
 
 function App() {
   return(
-    <div>
-      <MarquimDJ/>
+    <div className="App">
+       <div >
+        <MarquimDJ/>
+        </div>
     </div>
     
   );

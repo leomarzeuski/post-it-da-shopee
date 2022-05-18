@@ -28,31 +28,32 @@ export default function MarquimDJ(){
 
     return(
         
-        <div className='container'>
-                    <form className="formMensagem" onSubmit={enviarValidar}>
-            <label>
+        <div className='form'>
+            <form className="formMensagem" onSubmit={enviarValidar}>
+            <label className='Mensagem'>
                 Mensagem:
-                <input type="text" name="mensagem" value= {Mensagem} onChange={mensagemAlterar}/>
+                <input id="Men" type="text" name="mensagem" value= {Mensagem} onChange={mensagemAlterar}/>
             </label>
 
-            <label>
-                titulo:
-                <input type="text" name="titulo" value={Titulo} onChange={tituloAlterar} />
+            <label className='titulo'>
+                Titulo:
+                <input id="tit" type="text" name="titulo" value={Titulo} onChange={tituloAlterar} />
             </label>
 
-            <label>
-                data:
+            <label className='data'>
+                Data:
                 <input type="date" name="data" value={Data} onChange={dataAlterar}/>
             </label>
-            <button type="submit" value= "Enviar" onClick={enviarValidar}>Enviar</button>
+            <button className='button' type="submit" value= "Enviar" onClick={enviarValidar}>Enviar</button>
 
 
         </form> 
 
-        <div>
+        <div className='showList'>
         <Fila conteudo={Lembrete}></Fila>
         </div>
 
         </div>
+       
     );
 }
