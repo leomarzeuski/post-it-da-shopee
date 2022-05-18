@@ -1,18 +1,15 @@
-
 import './App.css';
 import MarquimDJ from './componentes/MarquimDJ.js';
 
-
 function App() {
-  return(
+  return (
     <div className="App">
-       <div >
-        <MarquimDJ/>
-        </div>
+      <div >
+        <MarquimDJ />
+      </div>
     </div>
-    
-  );
 
+  );
 }
 
 export default App;
