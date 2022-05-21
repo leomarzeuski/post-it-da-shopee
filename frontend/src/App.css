@@ -1,17 +1,27 @@
 .App {
+  align-items: center;
+  align-content: center;
   display: grid;
   background: linear-gradient(208deg, rgba(3,65,89,1) 0%, rgba(2,89,81,1) 25%, rgba(2,115,94,1) 59%, rgba(3,140,62,1) 85%, rgba(19,208,85,1) 100%);
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
   color: white;
   text-align: center;
   position: relative;
 }
 
+.componente1{
 
+width: fit-content;
+height: fit-content;
+justify-content: center;
+text-align: center;
+}
 
 .form{
+  margin: auto;
   text-align: left;
   margin-top: 30px;
   height: fit-content;
@@ -26,12 +36,7 @@
   border: 1px solid rgba(255, 255, 255, 0.01);
 }
 
-.showList{
-  color: white;
-  border-radius: 15px;
 
-
-}
 
 .button{
   height: 50px;
@@ -110,7 +115,7 @@ ul{
 .formMensagem{
   margin: 20px;
   display: grid;
-  grid-template-columns: 50vh 50vh;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -186,4 +191,44 @@ input[type=date] {
   -webkit-backdrop-filter: blur(3.7px);
   color: white;
   font-size:18px;
+}
+
+.card{
+height: 20vh;
+width: 20vh;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.showList{
+  
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: grid;
+  height: fit-content;
+  grid-template-columns: 20vh 20vh 20vh 20vh 20vh;
+  grid-template-rows: auto;
+  gap: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.lista-banner{
+
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: 1fr 1f;
+  
+}
+
+.lista-header{
+
+grid-column-start: 1;
+grid-column-end: 3;
+
+
 }

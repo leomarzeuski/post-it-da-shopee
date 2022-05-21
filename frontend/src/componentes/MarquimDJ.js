@@ -26,7 +26,7 @@ export default function MarquimDJ() {
     }
 
     return (
-        <div>
+        <div className='componente1'>
             <div className='form'>
                 <form className="formMensagem" onSubmit={enviarValidar}>
                     <label className='Mensagem'>
