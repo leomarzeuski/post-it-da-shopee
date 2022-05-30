@@ -6,230 +6,76 @@
 	},
 	"item": [
 		{
-			"name": "users",
-			"item": [
-				{
-					"name": "all",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjUyODcyNjA2LCJleHAiOjE2NTI4NzYyMDZ9.su8ToWzNqPZ73RT7HYXfvfVvjd6nK9zi5ES_Sjnh9qc",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/users/all",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"users",
-								"all"
-							]
+			"name": "cards/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"TESTE 2\",\r\n    \"body\": \"BODY\",\r\n    \"date\": \"2022-05-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					},
-					"response": []
+					}
 				},
-				{
-					"name": "create",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjUyODcyNjA2LCJleHAiOjE2NTI4NzYyMDZ9.su8ToWzNqPZ73RT7HYXfvfVvjd6nK9zi5ES_Sjnh9qc",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Teste\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"123456\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/users/create",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"users",
-								"create"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"123456\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/login",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"login"
-							]
-						}
-					},
-					"response": []
+				"url": {
+					"raw": "https://projeto-post.azurewebsites.net/api/cards/new",
+					"protocol": "https",
+					"host": [
+						"projeto-post",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"cards",
+						"new"
+					]
 				}
-			]
+			},
+			"response": []
 		},
 		{
-			"name": "messages",
-			"item": [
-				{
-					"name": "create",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjUyODcyNjA2LCJleHAiOjE2NTI4NzYyMDZ9.su8ToWzNqPZ73RT7HYXfvfVvjd6nK9zi5ES_Sjnh9qc",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Teste\",\r\n    \"body\": \"teste saajkdsakhshdasjkhshjadashdhkdaskaskhadsdhkddasj teste\",\r\n    \"received_user_id\": \"10\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/messages/create",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"messages",
-								"create"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
+			"name": "cards/:date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"TESTE\",\r\n    \"body\": \"BODY\",\r\n    \"date\": \"2022-05-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					},
-					"response": []
+					}
 				},
-				{
-					"name": "received",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImlhdCI6MTY1Mjg3MjgxNCwiZXhwIjoxNjUyODc2NDE0fQ.BmERzcfsF8GNAjPANCmMZQSZFaSESepl8urYyW4vRh4",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/messages/received",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"messages",
-								"received"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
+				"url": {
+					"raw": "https://projeto-post.azurewebsites.net/api/cards/2022-05-30",
+					"protocol": "https",
+					"host": [
+						"projeto-post",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"cards",
+						"2022-05-30"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": null,
+							"disabled": true
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "sent",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjUyODcyNjA2LCJleHAiOjE2NTI4NzYyMDZ9.su8ToWzNqPZ73RT7HYXfvfVvjd6nK9zi5ES_Sjnh9qc",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "https://projeto-post.azurewebsites.net/api/messages/sent",
-							"protocol": "https",
-							"host": [
-								"projeto-post",
-								"azurewebsites",
-								"net"
-							],
-							"path": [
-								"api",
-								"messages",
-								"sent"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
+					]
 				}
-			]
+			},
+			"response": []
 		}
 	]
 }

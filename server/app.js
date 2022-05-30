@@ -2,12 +2,10 @@ require('dotenv-safe').config();
 
 const createError = require('http-errors');
 const path = require('path');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const express = require('express');
 const mysql = require('mysql');
 const fs = require('fs');
-const auth = require('./routes/middleware.js');
 
 const con = mysql.createConnection({
     host: process.env.MYSQL_HOST, 
@@ -29,7 +27,6 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 con.connect((err) => {
@@ -42,7 +39,7 @@ con.connect((err) => {
   console.log('Connection established!');
 });
 
-require('./routes')(app, con, auth);
+require('./routes')(app, con);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

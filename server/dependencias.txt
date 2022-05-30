@@ -1,0 +1,8 @@
+debug - exibe um log de atividades no console
+dotenv-safe - abre a possibilidade de implantar variáveis de ambiente para aumentar a segurança e esconder dados sensíveis
+ejs - cria templates html para a api express (necessário para implantar na azure)
+express - framework js para node para a criação de servidores back-end
+http-errors - cria objetos de erro para retorno da api
+morgan - exibe logs de requisições http no console
+mysql - conector de mysql para o nodejs
+nodemon - monitor js que restarta automaticamente o servidor assim que notar alguma diferença no código ou estrutura
