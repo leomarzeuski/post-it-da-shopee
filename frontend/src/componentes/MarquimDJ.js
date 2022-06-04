@@ -30,8 +30,8 @@ export default function MarquimDJ() {
             <div className='form'>
                 <form className="formMensagem" onSubmit={enviarValidar}>
                     <label className='Mensagem'>
-                        Mensagem:
-                        <input id="Men" type="text" name="mensagem" value={Mensagem} onChange={mensagemAlterar} />
+                       <div className='Tites'>Mensagem:</div> 
+                        <textarea id="Men" type="text" name="mensagem" value={Mensagem} onChange={mensagemAlterar} />
                     </label>
 
                     <label className='titulo'>

@@ -2,7 +2,7 @@
   align-items: center;
   align-content: center;
   display: grid;
-  background: linear-gradient(208deg, rgba(3,65,89,1) 0%, rgba(2,89,81,1) 25%, rgba(2,115,94,1) 59%, rgba(3,140,62,1) 85%, rgba(19,208,85,1) 100%);
+  background: linear-gradient(208deg, rgba(132,148,197,1) 0%, rgba(152,106,235,1) 25%, rgba(174,107,212,1) 59%, rgba(222,106,235,1) 85%, rgba(224,101,184,1) 100%);
   justify-content: center;
   height: fit-content;
   min-height: 100vh;
@@ -33,7 +33,7 @@ text-align: center;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.7px);
   -webkit-backdrop-filter: blur(3.7px);
-  border: 1px solid rgba(255, 255, 255, 0.01);
+  border: 1px solid #7065E0;
 }
 
 
@@ -44,7 +44,7 @@ text-align: center;
   font-size: 1.10em;
   border: none;
   border-radius: 8px;
-  background-color: #025951;
+  background-color: #7065E0;
   color: aliceblue;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -65,6 +65,18 @@ text-align: center;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   
+}
+
+textarea{
+  text-align: center;
+  margin: 10px;
+  border: 2px solid #7065E0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  color: white;
+  font-size: 18px;
 }
 
 .App-logo {
@@ -121,6 +133,11 @@ ul{
   grid-auto-flow: row;
 
 }
+.Tites{
+margin-bottom: auto;
+
+  
+}
 
 .Mensagem{
 
@@ -148,7 +165,7 @@ grid-column-end: 3;
 input[type=text] {
   text-align: center;
   margin: 10px;
-  border: 2px solid #034159;
+  border: 2px solid #7065E0;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(3.7px);
@@ -158,7 +175,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  border: 3px solid #0CF25D;
+  border: 3px solid #7065E0;
   border-radius: 4px;
 }
 
@@ -184,7 +201,7 @@ margin-left: 55px;
 input[type=date] {
   text-align: center;
   margin: 10px;
-  border: 2px solid #034159;
+  border: 2px solid #7065E0;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(3.7px);
@@ -194,6 +211,7 @@ input[type=date] {
 }
 
 .card{
+padding: 0px 7px 0px 7px;
 height: 20vh;
 width: 20vh;
 background: rgba(255, 255, 255, 0.2);
@@ -201,7 +219,7 @@ border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+border: 1px solid #986AEB;
 }
 
 .showList{
