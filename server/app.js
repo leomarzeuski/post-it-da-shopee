@@ -20,8 +20,7 @@ const con = mysql.createConnection({
 });
 
 const corsOptions = {
-  origin: ["*"],
-  optionsSuccessStatus: 200 // For legacy browser support
+  origin: "*",
 }
 
 const app = express();
