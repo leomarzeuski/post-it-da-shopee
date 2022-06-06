@@ -6,6 +6,7 @@ const logger = require('morgan');
 const express = require('express');
 const mysql = require('mysql');
 const fs = require('fs');
+const cors = require('cors')
 
 const con = mysql.createConnection({
     host: process.env.MYSQL_HOST, 
@@ -25,6 +26,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -6,3 +6,4 @@ http-errors - cria objetos de erro para retorno da api
 morgan - exibe logs de requisições http no console
 mysql - conector de mysql para o nodejs
 nodemon - monitor js que restarta automaticamente o servidor assim que notar alguma diferença no código ou estrutura
+cors - package para resolver o problema de cross-origin do navegador
